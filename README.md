@@ -1,129 +1,200 @@
-<<<<<<< HEAD
 # 📉 Customer Churn Prediction using Machine Learning
 
-This project is focused on predicting customer churn using a dataset from a telecommunications company. The goal is to identify customers who are likely to stop using the service, and understand the business factors behind churn, enabling proactive retention strategies.
+## 👩‍💻 Author
 
+**Mahwish Pervez**
+B.Tech Computer Science Student | Machine Learning & Data Science Enthusiast
 
-## 🧠 Objective
+---
 
-The main objective of this project is to:
+## 📌 Project Overview
 
-- Analyze customer data to discover patterns and churn drivers
-- Build machine learning models to **predict churn**
-- Compare models to select the best performing one
-- Translate insights into **actionable business recommendations**
+Customer churn is one of the biggest challenges faced by subscription-based businesses. This project uses Machine Learning techniques to predict whether a customer is likely to leave a telecom service provider based on demographic, account, and service-related information.
 
+The objective is to help organizations identify high-risk customers and take proactive retention measures.
+
+---
+
+## 🎯 Objectives
+
+* Analyze customer behavior and churn patterns
+* Perform Exploratory Data Analysis (EDA)
+* Build and compare Machine Learning models
+* Identify key factors influencing churn
+* Generate business recommendations based on insights
+
+---
 
 ## 📊 Dataset
 
-- **Source**: Telco Customer Churn Dataset (from IBM Sample Datasets or Kaggle)
-- **Rows**: 7043 customers
-- **Columns**: 21 (features include customer demographics, services, payment info, etc.)
-- **Target**: `Churn` (Yes/No)
+**Dataset:** Telco Customer Churn Dataset
 
+### Features Include:
 
+* Customer demographics
+* Contract details
+* Payment methods
+* Internet services
+* Account information
+* Monthly and total charges
 
-## 🔍 Exploratory Data Analysis (EDA)
+### Target Variable:
 
-We explored the data using Seaborn and Matplotlib. Key visualizations include:
+* **Churn**
 
-- ✅ Pie chart showing **overall churn rate**
-- ✅ Histograms for **tenure** and **monthly charges** by churn
-- ✅ Countplots for **contract type** and **payment method** vs churn
-- ✅ Correlation heatmaps for numeric features
+  * Yes
+  * No
 
-These helped us form business insights such as:
-- Customers with short tenure churn more
-- Month-to-month contracts are associated with higher churn
-- Electronic check users churn more than credit card users
-- Higher charges lead to higher churn risk
+Dataset Size:
 
+* 7043 Records
+* 21 Features
 
+---
+
+## 🔍 Exploratory Data Analysis
+
+EDA was performed using Pandas, Matplotlib, and Seaborn to understand customer behavior.
+
+### Key Findings
+
+* Customers with shorter tenure show higher churn rates.
+* Month-to-month contracts have significantly higher churn.
+* Electronic check users are more likely to churn.
+* Customers with higher monthly charges tend to leave more frequently.
+* Long-term contract customers are comparatively loyal.
+
+---
 
 ## 🤖 Machine Learning Models
 
-We trained and evaluated the following models:
+The following models were trained and evaluated:
 
-| Model                 | Accuracy |
-|----------------------|----------|
-| Logistic Regression  | ~80%     |
-| Random Forest        | ~82% ✅ Best |
-| Support Vector Machine (SVM) | ~78% |
-| K-Nearest Neighbors  | ~75%     |
-| Naive Bayes          | ~72%     |
+| Model                  | Accuracy |
+| ---------------------- | -------- |
+| Logistic Regression    | 80%      |
+| Random Forest          | 82%      |
+| Support Vector Machine | 78%      |
+| K-Nearest Neighbors    | 75%      |
+| Naive Bayes            | 72%      |
 
-- We used **Label Encoding**, **Feature Scaling**, and **Train-Test Split**.
-- Models were evaluated using **Accuracy**, **Confusion Matrix**, and **Classification Report**.
-- Best-performing model: **Random Forest Classifier**
+### Best Performing Model
 
+🏆 Random Forest Classifier
 
+Evaluation Metrics:
+
+* Accuracy Score
+* Confusion Matrix
+* Precision
+* Recall
+* F1-Score
+* Classification Report
+
+---
 
 ## 📈 Visualizations
 
-All visualizations used for EDA and model comparison are saved in the `visuals/` folder. These include:
+The project includes:
 
-- Churn Distribution Pie Chart
-- Tenure Distribution by Churn
-- Monthly Charges KDE by Churn
-- Contract Type vs Churn
-- Model Accuracy Bar Plot
+* Churn Distribution Analysis
+* Customer Tenure Distribution
+* Monthly Charges Distribution
+* Contract Type vs Churn
+* Payment Method vs Churn
+* Correlation Heatmap
+* Model Performance Comparison
 
 ---
 
-## 🧠 Business Insights
+## 💡 Business Insights
 
-This project doesn't just build a predictive model — it **translates data into business value**:
+* Approximately 27% of customers churn.
+* Month-to-month contract customers have the highest churn probability.
+* Short-tenure customers require targeted onboarding strategies.
+* Electronic check payment users represent a high-risk segment.
+* Predictive analytics can significantly improve customer retention efforts.
 
-- **~27% of customers churn** — a serious revenue leakage
-- Customers with **month-to-month contracts churn at 42%**, vs just 11% on long-term contracts
-- **Short-tenure users (<12 months)** are most likely to leave — onboarding needs improvement
-- **Electronic check** as a payment method is a major churn signal
-- Our model can help businesses **predict churners in advance** and run targeted retention campaigns
+---
 
+## 🚀 Business Recommendations
 
+### 1. Improve Customer Onboarding
 
-## 💼 Business Recommendations
+Provide personalized support during the first year of service.
 
-| Strategy | Explanation |
-|----------|-------------|
-| 🎯 Target short-tenure users | Offer onboarding perks or welcome incentives |
-| 📄 Encourage long-term contracts | Provide discounts to switch from month-to-month |
-| 💳 Avoid churn-prone payment methods | Encourage auto-pay or credit card users |
-| 📢 Use model predictions | Export churn scores weekly to customer support & marketing |
+### 2. Promote Long-Term Contracts
 
+Offer discounts and incentives for annual subscriptions.
+
+### 3. Encourage Automated Payments
+
+Reduce churn risk by promoting credit card and auto-payment methods.
+
+### 4. Deploy Predictive Monitoring
+
+Use churn predictions to identify at-risk customers early.
+
+---
 
 ## 🛠️ Technologies Used
 
-- **Python**
-- **Pandas, NumPy** (data cleaning & processing)
-- **Seaborn, Matplotlib** (visualizations)
-- **Scikit-learn** (modeling)
-- **Jupyter Notebook**
-
-
-
-## 📌 Future Improvements
-
-- Use **SMOTE** for class imbalance
-- Deploy the model with a **Streamlit app** for business users
-- Incorporate **customer sentiment or feedback** as additional features
-- Track model performance over time with real churn data
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Jupyter Notebook
 
 ---
+
+## 📂 Project Structure
+
+```text
+Customer_Churn_Prediction/
+│
+├── data/
+├── notebooks/
+├── visuals/
+├── models/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Hyperparameter Tuning using GridSearchCV
+* XGBoost and CatBoost Models
+* SHAP Explainability Analysis
+* Streamlit Dashboard Deployment
+* Real-Time Churn Prediction System
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project I gained practical experience in:
+
+* Data Cleaning
+* Exploratory Data Analysis
+* Feature Engineering
+* Classification Algorithms
+* Model Evaluation
+* Business-Oriented Data Interpretation
+
+---
+
 ## 🙋‍♀️ About Me
 
-I'm a third-year Computer Applications student with a passion for data science. This project reflects my ability to combine technical machine learning skills with real-world business thinking. Looking for roles in **Data Analysis** or **Data Science**.
+I am **Mahwish Pervez**, a Computer Science student passionate about Machine Learning, Data Science, and Software Development.
 
-📫 Reach me on [LinkedIn](www.linkedin.com/in/tanvi-sharma25)  
-📂 Portfolio: [My Portfolio ->](https://tanvirohitsharma.my.canva.site/portfolio)
+I enjoy building data-driven solutions that transform raw data into actionable insights and business value.
 
 ---
 
-## ⭐ Star This Repo
+## ⭐ Support
 
-If you found this project useful, please give it a ⭐ on GitHub. It helps me grow!
-
-
-=======
-# Customer_Churn_Prediction
->>>>>>> 4b586bf713102d2d3e58fc586b416845b15318fa
+If you find this project useful, consider giving it a star on GitHub.
